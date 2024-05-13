@@ -139,4 +139,3 @@ app.delete('/directories/:id', async (req, res) => {
 app.listen(port, () => {
   console.log(`API corriendo el puerto 3000`);
 });
-
