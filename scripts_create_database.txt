@@ -1,0 +1,13 @@
+-- Database: db_practica
+
+-- DROP DATABASE IF EXISTS db_practica;
+
+CREATE DATABASE db_practica
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Spanish_Venezuela.1252'
+    LC_CTYPE = 'Spanish_Venezuela.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
