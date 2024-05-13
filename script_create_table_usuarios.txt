@@ -1,0 +1,16 @@
+-- Table: public.usuarios
+
+-- DROP TABLE IF EXISTS public.usuarios;
+
+CREATE TABLE IF NOT EXISTS public.usuarios
+(
+    id bigint NOT NULL DEFAULT nextval('usuarios_id_usuario_seq'::regclass),
+    name character varying COLLATE pg_catalog."default",
+    email character varying COLLATE pg_catalog."default",
+    CONSTRAINT usuarios_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.usuarios
+    OWNER to postgres;
