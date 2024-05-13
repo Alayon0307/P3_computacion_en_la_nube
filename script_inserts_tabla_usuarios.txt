@@ -1,0 +1,9 @@
+INSERT INTO public.usuarios(name,email)
+	VALUES ('Jose', 'jgalayon.18@est.ucab.edu.ve');
+	
+	
+INSERT INTO public.usuarios(name,email)
+	VALUES ('Alejandro', 'asangiacomo.17@est.ucab.edu.ve');
+	
+INSERT INTO public.usuarios(name,email)
+	VALUES ('Pedro', 'correo@gotmail.com');
