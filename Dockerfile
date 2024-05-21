@@ -2,10 +2,10 @@ FROM node:20.13.1
 
 WORKDIR /api
 
+COPY package*.json ./
+
+RUN npm install
+
 COPY . .
 
-RUN node api.js
-
-EXPOSE  3001
-
-CMD ["npm","start"]
+CMD ["npm", "start"]
