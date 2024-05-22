@@ -12,7 +12,7 @@ Para instalar este proyecto, sigue estos pasos:
 
 ## Uso
 
-Para iniciar el servidor, ejecuta el comando `node api.js`. Esto iniciará el servidor en `http://localhost:3000`.
+Para iniciar el servidor, ejecuta el comando `node app.js`. Esto iniciará el servidor en `http://localhost:3000`.
 
 Los endpoints disponibles son:
 
