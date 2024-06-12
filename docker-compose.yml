@@ -1,18 +1,38 @@
-version: '3'
+version: '3.8'
 services:
   app:
-    build: .
+    container_name: express_app
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    volumes:
-      - .:/api
+    environment:
+      - NODE_ENV=production
     depends_on:
       - db
+    networks:
+      - app-network
+
   db:
-    image: postgres:latest
+    container_name: postgres_db
+    image: postgres:13
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - ./tablas.sql:/docker-entrypoint-initdb.d/tablas.sql
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 12345
-      POSTGRES_DB: db_practica
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=db_practica
     ports:
       - "5432:5432"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:
+    driver: local
